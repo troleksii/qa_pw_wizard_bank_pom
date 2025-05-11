@@ -18,10 +18,10 @@ export class OpenAccountPage {
   }
 
   async selectCurrency(currency) {
-    await this.currencyDropdown.selectOption(currency)
+    await this.currencyDropdown.selectOption(currency);
   }
 
-  async assertCurrencyCorectlySelected(currency) {
+  async assertCurrencyCorrectlySelected(currency) {
     const currencyInputvalue = await this.currencyDropdown.inputValue();
     expect(currencyInputvalue).toBe(currency);
   }

@@ -45,6 +45,6 @@ usage:
  await customersListPage.assertFirstNameExist(firstName);
  await customersListPage.assertLastNameExist(lastName);
  await customersListPage.assertPostCodeExist(postCode);
- await customersListPage.asserAccountNumberExist();
+ await customersListPage.assertAccountNumberExist();
 
 });

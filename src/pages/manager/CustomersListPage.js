@@ -8,8 +8,8 @@ export class CustomersListPage {
     this.lastRow = this.table.getByRole('row').filter({ has: page.locator('td') }).last();    
     this.nameCell = this.lastRow.locator('td').nth(0);
     this.lastNameCell = this.lastRow.locator('td').nth(1);
-    this.postCodeCell = this.lastRow.locator('td').nth(2)
-    this.accountNumber = this.lastRow.locator('td').nth(3)
+    this.postCodeCell = this.lastRow.locator('td').nth(2);
+    this.accountNumber = this.lastRow.locator('td').nth(3);
     this.searchField = this.page.locator('input[placeholder="Search Customer"]');
   }
 
@@ -22,15 +22,15 @@ export class CustomersListPage {
   }
 
   async assertLastNameExist(lastName) {
-    await expect(this.lastNameCell).toHaveText(lastName)
+    await expect(this.lastNameCell).toHaveText(lastName);
   }
 
   async assertPostCodeExist(postCode) {
-    await expect(this.postCodeCell).toHaveText(postCode)
+    await expect(this.postCodeCell).toHaveText(postCode);
   }
 
-  async asserAccountNumberExist() {
-    await expect(this.accountNumber).toHaveText('')
+  async assertAccountNumberExist() {
+    await expect(this.accountNumber).toHaveText('');
   }
 
   async deleteLastRow() {
@@ -38,7 +38,7 @@ export class CustomersListPage {
   }
 
   async assertCustomerDeleted(customerName) {
-    await expect(this.nameCell).not.toHaveText(customerName)
+    await expect(this.nameCell).not.toHaveText(customerName);
   }
 
   async pageReload() {
@@ -54,6 +54,6 @@ export class CustomersListPage {
   }
 
   async assertNoOtherRows() {
-    await expect(this.rows).toHaveCount(1)
+    await expect(this.rows).toHaveCount(1);
   }
 }

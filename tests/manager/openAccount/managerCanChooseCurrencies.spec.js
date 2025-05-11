@@ -16,9 +16,9 @@ Test:
   const openAccountPage = new OpenAccountPage(page);
   await openAccountPage.open();
   await openAccountPage.selectCurrency('Dollar');
-  await openAccountPage.assertCurrencyCorectlySelected('Dollar');
+  await openAccountPage.assertCurrencyCorrectlySelected('Dollar');
   await openAccountPage.selectCurrency('Pound');
-  await openAccountPage.assertCurrencyCorectlySelected('Pound');
+  await openAccountPage.assertCurrencyCorrectlySelected('Pound');
   await openAccountPage.selectCurrency('Rupee');
-  await openAccountPage.assertCurrencyCorectlySelected('Rupee');
+  await openAccountPage.assertCurrencyCorrectlySelected('Rupee');
 });
